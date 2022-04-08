@@ -2,8 +2,10 @@
 
 ![image](https://user-images.githubusercontent.com/17979853/162460023-bb098114-a03b-434a-a308-d6aa1a60ebbe.png)
 
+## Text input filter:
 ![image](https://user-images.githubusercontent.com/17979853/162460161-8c79c286-a6f7-48cf-8f68-27734bc09cae.png)
 
+## Popup displaying character's home planet info
 ![image](https://user-images.githubusercontent.com/17979853/162460328-8aeba948-bc37-44a7-8786-00a1bcc7a0cf.png)
 
 
