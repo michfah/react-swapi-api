@@ -1,3 +1,12 @@
+# React App calling SWApi API and displaying table data. 
+
+![image](https://user-images.githubusercontent.com/17979853/162460023-bb098114-a03b-434a-a308-d6aa1a60ebbe.png)
+
+![image](https://user-images.githubusercontent.com/17979853/162460161-8c79c286-a6f7-48cf-8f68-27734bc09cae.png)
+
+![image](https://user-images.githubusercontent.com/17979853/162460328-8aeba948-bc37-44a7-8786-00a1bcc7a0cf.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
