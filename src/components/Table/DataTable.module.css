@@ -1,5 +1,6 @@
 .starWarsHeader {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 20px;
     font-weight: bold;
+    font-family: 'Major Mono Display', monospace;
 }
