@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+
+import SearchBox from "../Search/SearchBox";
 import TableWrapper from "./TableWrapper";
 import TableContent from "./TableContent";
 
 // material ui components
-import TextField from '@mui/material/TextField';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
@@ -52,10 +53,17 @@ const DataTable = () => {
         getData();
     }, [])
 
-    // search name functionality
-    function search(rows) {
-        return rows.filter((row) => row.name.toLowerCase().indexOf(query) > -1);
+
+    // input search query event
+    const onSearchChange = (event) => {
+        const searchQuery = event.target.value.toLocaleLowerCase();
+        setQuery(searchQuery);
     }
+
+    // filter name functionality based on query
+    const filteredCharacters = characters.filter((character) => {
+        return character.name.toLocaleLowerCase().includes(query);
+    });
 
     // sort columns asc, desc
     const onSort = column => event => {
@@ -96,15 +104,8 @@ const DataTable = () => {
     return (
         <>
             <div className={classes.starWarsHeader}>Star Wars Characters</div>
-            {/* search name input */}
-            <div className={classes.searchInputBox}>
-                <TextField
-                    label="Filter Character"
-                    variant="outlined"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                />
-            </div>
+            {/* search name component */}
+            <SearchBox onChangeHandler={onSearchChange} />
             {/* TableWrapper, TableHead, TableContent components */}
             <TableWrapper>
                 {isLoading ? (
@@ -123,7 +124,7 @@ const DataTable = () => {
                                 <TableCell onClick={onSort("homeworld")}>Planet Name</TableCell>
                             </TableRow>
                         </TableHead>
-                        <TableContent characterData={search(characters)} />
+                        <TableContent characterData={filteredCharacters} />
                     </>
                 )
                 }
